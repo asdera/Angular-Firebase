@@ -1,2 +1,2 @@
 # Angular-Firebase
-Learing Angular Firebase
+Learning Angular Firebase
