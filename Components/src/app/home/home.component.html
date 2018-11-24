@@ -1,0 +1,16 @@
+<h1 appMagnifier>{{ title }}</h1>
+
+<img [height] = "hp" (click)="handleClick()" src="https://t2.rbxcdn.com/41df88a1dc436075b05c66004f2076d7" alt="">
+
+<div *ngIf="clicks">
+  <h3>Hi, I'm {{ elon.name }}</h3>
+  <p>I was born in {{ elon.born }} and I am worth {{ elon.networth }}. Here is a list of all my most well known companies:</p>
+  <div *ngFor="let comp of elon.companies | async">
+    <p [ngClass]="{
+      'green': comp == 'PayPal',
+      'blue': comp == 'SpaceX',
+      'red': comp == 'Tesla',
+      'yellow': comp == 'SolarCity'
+    }">{{ comp }} ({{ comp | year }})</p>
+  </div>
+</div>

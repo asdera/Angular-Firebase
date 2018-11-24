@@ -1,0 +1,11 @@
+<h1>Painter List</h1>
+
+<ul>
+    <li *ngFor="let painter of painters$ | async">
+
+        <a routerLinkActive="active" [routerLink]="['/painters', painter.name.toLowerCase()]">{{ painter.name }}</a>
+
+    </li>
+</ul>
+
+<router-outlet></router-outlet>
