@@ -1,0 +1,14 @@
+<h1>
+  Welcome to {{ title }}!
+</h1>
+
+<!-- <div *ngFor="let note of notes | async">
+  <h3>{{ note | json </h3>
+</div> -->
+
+<h3>{{ note | async | json }}</h3>
+
+<input [(ngModel)]="newContent">
+<button (click)=updateContent()>Update</button>
+
+<router-outlet></router-outlet>
