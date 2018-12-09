@@ -15,7 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { AboutComponent } from './about/about.component';
-
+import { AuthGuard } from './core/auth.guard';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,7 @@ import { AboutComponent } from './about/about.component';
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     AngularFireStorageModule, AppRoutingModule // imports firebase/storage only needed for storage features
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

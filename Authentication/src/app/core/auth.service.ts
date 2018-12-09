@@ -11,7 +11,7 @@ interface User {
   uid: string;
   email: string;
   displayName?: string;
-  photoURL: user.photoURL;
+  photoURL: string;
 }
 
 @Injectable({
@@ -46,7 +46,12 @@ export class AuthService {
         })
     }
   
-  
+    signOut() {
+      this.afAuth.auth.signOut().then(() => {
+          this.router.navigate(['/']);
+      });
+    }
+    
     private updateUserData(user) {
       // Sets user data to firestore on login
   
