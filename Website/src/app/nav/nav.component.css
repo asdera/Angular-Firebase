@@ -1,0 +1,122 @@
+
+.navigation {
+    font-family: "Bussy";
+    font-size: 36px; 
+	position: fixed;
+    left: -10px;
+    right: -10px;
+    margin: 10px;
+    padding: 0;
+    /* background-color: #30B8DD; */
+    z-index: 2;
+}
+
+#nav-img {
+    position: absolute;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    width: 300px;
+}
+
+#nav-img img {
+    height: 140px;
+    width: auto;
+    transition: 400ms;
+    transition-delay: 100ms;
+}
+
+#nav-img img:hover {
+    -ms-transform: scaleX(-1); /* IE 9 */
+    -webkit-transform: scaleX(-1); /* Safari 3-8 */
+    transform: scaleX(-1);
+}
+
+.navigation .header-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.navigation .nav-space .header-content {
+    bottom: -50px;
+}
+
+.navigation .nav-side {
+    position: relative;
+    top: -120px;
+    width: 50%;
+    background-color: #30B8DD;
+    overflow: hidden;
+}
+
+.navigation .nav-left {
+    float: left;
+    -ms-transform: skewY(3deg); /* IE 9 */
+    -webkit-transform: skewY(3deg); /* Safari 3-8 */
+    transform: skewY(3deg);
+}
+
+.navigation .nav-right {
+    float: right;
+    -ms-transform: skewY(-3deg); /* IE 9 */
+    -webkit-transform: skewY(-3deg); /* Safari 3-8 */
+    transform: skewY(-3deg);
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: inline;
+}
+
+.navigation .left li {
+    float: right;
+}
+
+.navigation .right li {
+    float: left;
+}
+
+.navigation a {
+    text-align: center;
+    position: relative;
+    display: block;
+    text-align: center;
+    padding: 20px;
+    height: 160px;
+    width: 120px;
+    text-decoration: none;
+}
+
+.navigation .nav-space{
+    position: relative;
+    font-family: "SlyFox";
+    font-size: 80px; 
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0px;
+    height: 160px;
+    width: 260px;
+    text-decoration: none;
+}
+
+.nav-button {
+    transition: 400ms;
+    color: white;
+}
+
+/* Change the link color to #111 (black) on hover */
+.nav-button:hover {
+    background-color: white;
+    border-radius: 50%;
+    color: #30B8DD;
+}

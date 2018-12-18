@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: SlyFox;
+    src: url("/assets/slyfox.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Bussy;
+    src: url("/assets/bussy.ttf") format("truetype");
+}
+
+.trigger {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+}
