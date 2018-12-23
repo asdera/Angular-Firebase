@@ -57,55 +57,80 @@
   <rect x="0" y="0" width="30" height="20" stroke-width="0" fill="#4B3C95" fill-opacity="0"/>
 </svg> -->
 
+
+
 <div id="background-gallery" class="gallery">
   <div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <div *ngFor="let img of archive | slice:0:6" 
+      [ngStyle]="{
+        'background-image':'url('+img.url+')'
+      }">
+    </div>
   </div>
   <div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <div *ngFor="let img of archive | slice:6:12" 
+      [ngStyle]="{
+        'background-image':'url('+img.url+')'
+      }">
+    </div>
   </div>
   <div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <div class="graphics blob-btn"><span class="blob-btn__inner">
+      <span class="blob-btn__blobs">
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+      </span>
+    </span></div>
+    <div class="graphics blob-btn"><span class="blob-btn__inner">
+      <span class="blob-btn__blobs">
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+      </span>
+    </span></div>
+    <div id="title" class="graphics blob-btn"><span class="blob-btn__inner">
+      <span class="blob-btn__blobs">
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+      </span>
+    </span></div>
+    <div class="graphics blob-btn"><span class="blob-btn__inner">
+      <span class="blob-btn__blobs">
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+      </span>
+    </span></div>
+    <div class="graphics blob-btn"><span class="blob-btn__inner">
+      <span class="blob-btn__blobs">
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+      </span>
+    </span></div>
   </div>
   <div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <div *ngFor="let img of archive | slice:12:18" 
+      [ngStyle]="{
+        'background-image':'url('+img.url+')'
+      }">
+    </div>
   </div>
   <div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+    <div *ngFor="let img of archive | slice:18:24" 
+      [ngStyle]="{
+        'background-image':'url('+img.url+')'
+      }">
+    </div>
   </div>
 </div>
-
-<!-- <svg id="jelly" viewBox="0 0 100 200" width="1000px" height="1400px" preserveAspectRatio="none">
-  <rect x="0" y="30" width="100" height="60" rx="5" ry="5" stroke-width="0" fill="#7E70C8"/>
-  <path id="svg_41" d="m30,0 c20,20 -10,40 -10,40 c0,0 60,0 60,0 c0,0 -30,-20 -10,-40z" stroke-width="2" stroke="#7E70C8" fill="#6554BE"/>
-  <rect x="2.5" y="32.5" width="95" height="55" rx="5" ry="5" stroke-width="0" fill="#6554BE"/>
-</svg>
-  -->
 
 <svg id="blobs" viewBox="0 0 10 1" class="gallery" width="100%" height="10%" preserveAspectRatio="none">
   <path d="M0 0
@@ -122,5 +147,48 @@
     Z" stroke-width="0.2" stroke="#4B3C95" fill="#4B3C95"/>
 </svg>
 
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+      <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+    </filter>
+  </defs>
+</svg>
+
+<!-- <svg id="jelly" viewBox="0 0 100 200" width="1000px" height="1400px" preserveAspectRatio="none">
+  <rect x="0" y="30" width="100" height="60" rx="5" ry="5" stroke-width="0" fill="#7E70C8"/>
+  <path id="svg_41" d="m30,0 c20,20 -10,40 -10,40 c0,0 60,0 60,0 c0,0 -30,-20 -10,-40z" stroke-width="2" stroke="#7E70C8" fill="#6554BE"/>
+  <rect x="2.5" y="32.5" width="95" height="55" rx="5" ry="5" stroke-width="0" fill="#6554BE"/>
+</svg>
+  -->
 
 
+
+
+<!-- <div class="blobby">
+  <button class="blob-btn">
+    Login
+    <span class="blob-btn__inner">
+      <span class="blob-btn__blobs">
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+      </span>
+    </span>
+  </button>
+  <br/>
+  <button class="blob-btn">
+    Try It free
+    <span class="blob-btn__inner">
+      <span class="blob-btn__blobs">
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+        <span class="blob-btn__blob"></span>
+      </span>
+    </span>
+  </button>
+</div> -->
