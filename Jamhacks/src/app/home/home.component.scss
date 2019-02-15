@@ -44,7 +44,7 @@ body {
 }
 
 #background-gallery > div {
-    margin: 0.2em 0;
+    // margin: 0.2em 0;
     width: 100%;
     /* background: #7E70C8; */
     display: flex;
@@ -56,7 +56,7 @@ body {
 
 #background-gallery > div > div {
     display: block;
-    margin: 0 0.2em;
+    // margin: 0 0.2em;
     width: 0;
     height: 100%;
     line-height: 100%;
@@ -72,11 +72,19 @@ body {
 //     background-color: white;
 // }
 
-#background-gallery > div > #title {
-    flex-grow: 2;
+#title {
+    position: absolute;
     background-image: url(/assets/graphics/max.svg);
-    width: 0.5em;
-    margin: 0 0.2em;
+    background-color: none;
+    top: 50%;
+    left: 50%;
+    width: 50em;
+    height: 20em;
+    margin-left: -25em;
+    margin-top: -10em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 #background-gallery > div:nth-child(3) > div:nth-child(1) {
@@ -122,7 +130,7 @@ body {
 
 
 $main-color: rgb(150, 130, 250);
-$sec-color: blue;
+$sec-color: none;
 
 .blob-btn {
   $numOfBlobs: 4;

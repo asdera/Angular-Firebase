@@ -17,6 +17,7 @@ interface Picture {
 
 export class HomeComponent implements OnInit {
   archive: Picture[] = [];
+  row: Number[] = [0, 6, 12, 18, 24, 30];
   zip: JSZip = JSZip();
   constructor() {
   }
@@ -26,7 +27,14 @@ export class HomeComponent implements OnInit {
     for (var i=0; i<40; i++) {
       this.archive.push({url: "/assets/archive/DSC_"+i+".JPG"});
     }
-    console.log(this.archive)
+    this.archive = this.shuffle(this.archive);
   }
 
+  shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
 }
